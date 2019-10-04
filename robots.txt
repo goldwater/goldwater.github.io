@@ -4,4 +4,4 @@ Allow: /about
 Allow: /solution
 Allow: /faq
 Allow: /contact
-Sitemap: https://www.missionmule.com/sitemap.xml
+Sitemap: https://www.goldwaterindustries.com/sitemap.xml
