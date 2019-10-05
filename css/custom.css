@@ -4,4 +4,6 @@
 
 .image-xxs {max-width: 200px;}
 
+.extra-bold {font-weight: 800 !important;}
+
 #loadOverlay{display: none;}
