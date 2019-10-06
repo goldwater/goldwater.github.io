@@ -17,4 +17,7 @@ a:hover {
 
 .main-title { margin-left: -7px; }
 
+.btn-black { color: #333; border-color: #333; }
+.btn-black:hover { background: #333; color: #fff; }
+
 #loadOverlay{display: none;}
