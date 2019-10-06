@@ -18,6 +18,6 @@ a:hover {
 .main-title { margin-left: -7px; }
 
 .btn-black { color: #333 !important; border-color: #333; }
-.btn-black:hover { background: #333; color: #fff; }
+.btn-black:hover { color: #fff !important; background: #333; }
 
 #loadOverlay{display: none;}
