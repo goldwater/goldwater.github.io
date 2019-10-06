@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Goldwater Industries - Access any device, anywhere.</title>
+  <title>Goldwater Industries - Access any sensor, anywhere.</title>
 
   <div id="loadOverlay" style="background-color:#333; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
 
@@ -98,7 +98,44 @@
           <div class="module left">
             <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="menu">
               <li class="vpf">
-                <a href="/scout" target="_self">Scout AI </a>
+                <a href="/scout" target="_self">Scout AI Core </a>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">
+                  Sensors
+                </a>
+                <ul>
+                  <li>
+                    <a href="agriculture" target="_self">
+                      Visual & Thermal Imaging
+                    </a>
+                  </li>
+                  <li>
+                    <a href="agriculture" target="_self">
+                      Microphones
+                    </a>
+                  </li>
+                  <li>
+                    <a href="agriculture" target="_self">
+                      High-Fidelity Seismometers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="agriculture" target="_self">
+                      Flow Rate
+                    </a>
+                  </li>
+                  <li>
+                    <a href="agriculture" target="_self">
+                      Radar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="agriculture" target="_self">
+                      Custom Integration
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="has-dropdown">
                 <a href="#">
@@ -153,10 +190,12 @@
               <li class="vpf">
                 <a href="/contact" target="_self">Contact </a>
               </li>
+              <li class="vpf">
+                <a href="/buy" target="_self">Buy </a>
+              </li>
             </ul>
           </div>
         </div>
-
       </div>
     </nav>
   </div>
@@ -172,9 +211,9 @@
           <div class="container v-align-transform">
             <div class="row">
               <div class="col-md-6 col-sm-8">
-                <h1 class="mb40 mb-xs-16 large">We Deliver Remote Data.</h1>
-                <h6 class="uppercase mb16">ACCESS ANY DEVICE, ANYWHERE.</h6>
-                <p class="lead mb40">Goldwater offers real-time access to critical ground-sensors far beyond the reaches of traditional wireless infrastructure.
+                <h1 class="mb40 mb-xs-16 large">Remote Data Delivered</h1>
+                <h6 class="uppercase mb16">ACCESS ANY SENSOR, ANYWHERE.</h6>
+                <p class="lead mb40">Goldwater offers real-time access to critical ground-sensors far beyond the reaches of existing power and connectivity infrastructure.
                   <br>
                 </p>
                 <a class="btn btn-lg" href="/contact" target="_self">Deploy</a>
@@ -185,16 +224,17 @@
       </ul>
     </section>
     <section>
-      <div class="container mb80">
+      <div class="container mb96">
         <div class="row v-align-children">
           <div class="col-md-7 col-sm-6 text-center mb-xs-24">
             <img class="cast-shadow" alt="Screenshot" src="img/sample-data.jpg">
           </div>
           <div class="col-md-4 col-md-offset-1 col-sm-5 col-sm-offset-1">
-            <h3>Real-time imagery streamed over satellite<br></h3>
-            <p>
-              Beyond conventional cellular infrastructure, data has traditionally been out of reach. Goldwater's Scout AI sensor platform offers real-time imagery and video streaming over satellite, giving your team a persistent eye on the ground—no matter how remote.
+            <h3>Real-time data streamed over satellite<br></h3>
+            <p class="mb40">
+              Beyond conventional connectivity and power infrastructure, sensor data has traditionally been out of reach. Goldwater's Scout AI Core offers real-time data streaming, including imagery and video, over an unlimited satellite link. Scout is your team's persistent eye on the ground—no matter how remote.
             </p>
+            <h6 class="uppercase">From $480 per month. <a class="blue-link" href="#">Buy now</a></h6>
           </div>
         </div>
       </div>
@@ -215,18 +255,24 @@
     <section class="bg-secondary">
         <div class="container">
             <div class="row v-align-children">
-                <div class="col-sm-4 col-md-offset-1 mb-xs-24">
-                    <h2 class="mb64 mb-xs-32">Meet Scout, your newest teammate.</h2>
-                    <div class="mb40 mb-xs-24">
-                        <h5 class="uppercase bold mb16 extra-bold">AI At The Edge</h5>
+                <div class="col-sm-5 col-md-offset-1 mb-xs-24">
+                    <h2 class="mb40 mb-xs-32">Meet the Scout AI Core, your newest teammate.</h2>
+                    <div class="mb32 mb-xs-24">
+                        <h5 class="uppercase bold mb8 extra-bold">AI At The Edge</h5>
                         <p class="fade-1-4">
-                            Scout is powered by a dedicated, onboard AI chip, enabling real-time, trainable anomoly detection for round-the-clock monitoring.
+                            Scout is powered by the Google Coral AI SoM, enabling real-time, trainable anomoly detection for round-the-clock monitoring and alerts.
                         </p>
                     </div>
-                    <div class="mb40 mb-xs-24">
-                        <h5 class="uppercase bold mb16 extra-bold">Remote Fieldwork Ready</h5>
+                    <div class="mb32 mb-xs-24">
+                        <h5 class="uppercase bold mb8 extra-bold">Multi-Sensor Compatability</h5>
                         <p class="fade-1-4">
-                            Scout has been designed from the ground up to thrive in the world's harshest and most dangerous enviornments. Scout will be there so you don't have to.
+                            Scout is compatible with dozens of existing third-party sensors and protocols from thermal imaging to high-fidelity seismometers, enabiling remote ground sensor access for any industry or application.
+                        </p>
+                    </div>
+                    <div class="mb32 mb-xs-24">
+                        <h5 class="uppercase bold mb8 extra-bold">Remote Fieldwork Ready</h5>
+                        <p class="fade-1-4">
+                            Scout has been designed from the ground up to thrive in the world's harshest and most dangerous enviornments with integrated solar power and unlimited satellite data. Scout will be there so you don't have to.
                         </p>
                     </div>
                 </div>
@@ -298,7 +344,7 @@
 
         <div class="row fade-half">
           <div class="col-sm-12 text-center">
-            <span>© Copyright 2019 Goldwater Industries - All Rights Reserved</span>
+            <span>© Copyright 2019 Goldwater Industries. All Rights Reserved.</span>
           </div>
         </div>
       </div>
