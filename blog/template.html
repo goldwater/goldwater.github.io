@@ -1,112 +1,314 @@
-
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Mission Mule - FAQ</title>
 
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<head>
+  <meta charset="utf-8">
+  <title>Goldwater Systems - Access any sensor, anywhere.</title>
 
-          ga('create', 'UA-117287492-1', 'auto');
-          ga('send', 'pageview');
-        </script>
+  <div id="loadOverlay" style="background-color:#333; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
-        <link href="/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="/css/theme.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
-        <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149344050-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-		<div class="nav-container"><nav>
-		        <div class="nav-bar">
-		            <div class="module left">
-                    <a href="/">
-                        <img class="logo logo-light" alt="Foundry" src="/img/logo-light.png">
-                        <div class="vnu"><img class="logo logo-dark" alt="Foundry" src="/img/mm-logo.png"></div>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-149344050-1');
+  </script>
+
+  <!-- Start of Async Drift Code -->
+  <script>
+    "use strict";
+
+    ! function() {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void(window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function(e) {
+            return function() {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+          }), t.load = function(t) {
+            var e = 3e5,
+              n = Math.ceil(new Date() / e) * e,
+              o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    // drift.SNIPPET_VERSION = '0.3.1';
+    // drift.load('6pcw4u3a3amw');
+  </script>
+  <!-- End of Async Drift Code -->
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Goldwater Systems",
+      "image": "https://www.goldwatersystems.com/img/favicon/favicon-310.png",
+      "telephone": "+1 (510) 775-0195",
+      "email": "info@goldwatersystems.com",
+      "description": "Goldwater offers real-time access to critical ground-sensors far beyond the reaches of existing power and connectivity infrastructure.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Livermore",
+        "addressRegion": "CA"
+      },
+      "url": "https://www.goldwatersystems.com/"
+    }
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Goldwater offers real-time access to critical ground-sensors far beyond the reaches of existing power and connectivity infrastructure.">
+  <link href="/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+  <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="/img/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="/img/favicon/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="/img/favicon/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16.png">
+  <link rel="apple-touch-icon" href="/img/favicon/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#4C4C4C">
+  <meta name="msapplication-TileImage" content="/img/favicon/favicon-144.png">
+  <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+
+</head>
+
+<body>
+
+  <div class="nav-container">
+    <nav>
+      <div class="nav-bar">
+        <div class="module left">
+          <a href="/">
+            <div class="vnu"><img class="logo logo-light" alt="Goldwater" src="/img/goldwater-logo-dark.png"></div>
+            <img class="logo logo-dark" alt="Goldwater" src="/img/goldwater-logo-dark.png">
+          </a>
+        </div>
+        <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+          <i class="ti-menu"></i>
+        </div>
+        <div class="module-group right">
+          <div class="module left">
+            <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="menu">
+              <li class="vpf">
+                <a href="/scout" target="_self">Scout AI Core </a>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">
+                  Sensors
+                </a>
+                <ul>
+                  <li>
+                    <a href="/sensors/audio" target="_self">
+                      Audio
                     </a>
-		            </div>
-		            <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-		                <i class="ti-menu"></i>
-		            </div>
-                <div class="module-group right">
-		                <div class="module left">
-		                    <ul class="menu">
-                            <li>
-                                <a href="/" target="_self">Home </a>
-                            </li><li class="vpf">
-                                <a href="/solution" target="_self">Solution </a>
-                            </li><li class="vpf">
-                                <a href="/about" target="_self">About </a>
-                            </li><li class="vpf">
-                                <a href="/faq" target="_self">faq </a>
-                            </li><li class="vpf">
-                                <a href="/contact" target="_self">contact </a>
-                            </li>
-		                    </ul>
-		                </div>
-		            </div>
+                  </li>
+                  <li>
+                    <a href="/sensors/flow" target="_self">
+                      Liquid Flow Rate
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/radar" target="_self">
+                      Radar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/seismometer" target="_self">
+                      Seismic Waves
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/imaging" target="_self">
+                      Visual & Thermal Imaging
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/custom" target="_self">
+                      Custom Integration
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">
+                  Industries
+                </a>
+                <ul>
+                  <li>
+                    <a href="/industries/agriculture" target="_self">
+                      Agriculture
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/construction" target="_self">
+                      Construction
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/wildlife" target="_self">
+                      Park & Wildlife Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/forestry" target="_self">
+                      Forestry
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/defense" target="_self">
+                      Defense & Security
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/land-management" target="_self">
+                      Land Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/mining" target="_self">
+                      Mining
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/oil-and-gas" target="_self">
+                      Oil & Gas
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="vpf">
+                <a href="/blog" target="_self">Blog </a>
+              </li>
+              <li class="vpf">
+                <a href="/about" target="_self">About </a>
+              </li>
+              <li class="vpf">
+                <a href="/contact" target="_self">Contact </a>
+              </li>
+              <li class="vpf">
+                <a href="/buy" target="_self">Buy </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-		        </div>
-		    </nav>
+  <div class="main-container">
 
-		</div>
+    <section class="page-title page-title-4 bg-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="uppercase mb0">Post Title</h3>
+          </div>
+          <div class="col-md-6 text-right">
+            <ol class="breadcrumb breadcrumb-2">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/blog">Blog</a>
+              </li>
+              <li class="active">Post Title</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<div class="main-container">
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="post-snippet mb64">
+              <div class="post-title">
+                <span class="label">October 9, 2019</span>
+                <h4 class="inline-block">Post Title</h4>
+              </div>
+              <ul class="post-meta">
+                <li>
+                  <span>by Author Name</span>
+                </li>
+              </ul>
+              <hr>
+              <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
+                officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+                facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+              </p>
+              <blockquote>
+                It's our challenges and obstacles that give us layers of depth and make us interesting. Are they fun when they happen? No. But they are what make us unique. And that's what I know for sure... I think.
+              </blockquote>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              </p>
+              <ul class="bullets">
+                <li>Beatae vitae dicta sunt explicabo</li>
+                <li>Inventore veritatis et quasi architecto</li>
+                <li>Sed do eiusmod tempor incididunt</li>
+                <li>Accusamus et iusto odio dignissimos ducimus</li>
+              </ul>
+            </div>
+            <!--end of post snippet-->
+          </div>
+          <!--end of nine col-->
+        </div>
+        <!--end of container row-->
+      </div>
+      <!--end of container-->
+    </section>
+  </div>
 
+  <footer class="footer bg-dark pt-xs-40">
+    <div class="container">
+      <div class="row fade-half">
+        <div class="col-sm-12 text-center">
+          <span>© Copyright 2019 Goldwater Systems. All Rights Reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-		</div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/flexslider.min.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
 
-
-		    </section><footer class="footer-2 bg-dark pt96 pt-xs-40">
-				<div class="container">
-					<div class="row mb64 mb-xs-24">
-						<div class="col-sm-12">
-              <a href="/">
-								<div class="vnu"><img alt="logo" class="image-xxs" src="/img/mm-logo-white.png"></div>
-							</a>
-						</div>
-					</div>
-					<div class="row mb64 mb-xs-24">
-						<div class="col-md-3 col-sm-4">
-							<ul>
-								<li><a href="/"><h5 class="uppercase mb16 fade-on-hover">Home</h5></a></li>
-                <li><a href="/solution"><h5 class="uppercase mb16 fade-on-hover">Solution<br></h5></a></li>
-								<li><a href="/about"><h5 class="uppercase mb16 fade-on-hover">About<br></h5></a></li>
-							</ul>
-						</div>
-
-						<div class="col-md-3 col-sm-4">
-							<ul>
-								<li><a href="/faq"><h5 class="uppercase mb16 fade-on-hover">Faq<br></h5></a></li>
-								<li><a href="/contact"><h5 class="uppercase mb16 fade-on-hover">Contact<br></h5></a></li>
-							</ul>
-						</div>
-
-            <div class="col-md-4 col-md-offset-2 col-sm-4">
-							<p class="lead fade-on-hover">Made with ♥ in Livermore, CA.<br></p><p class="lead vpf fade-on-hover">info@missionmule.com<br>+1 (510) 775-0195<br></p>
-						</div>
-					</div>
-
-					<div class="row fade-half">
-						<div class="col-sm-12 text-center">
-							<span>© Copyright 2019 Mission Mule - All Rights Reserved</span>
-						</div>
-					</div>
-				</div>
-			</footer></div>
-
-
-	<script src="/js/jquery.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/parallax.js"></script>
-        <script src="/js/scripts.js"></script>
-    </body>
 </html>
