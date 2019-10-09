@@ -25,6 +25,24 @@ a:hover {
 .btn-black { color: #333 !important; border-color: #333; }
 .btn-black:hover { color: #fff !important; background: #333; }
 
+.btn-secondary{
+  font-size:11px;
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing:1px;
+  color:#292929;
+  opacity:0.5;
+  transition:all 0.3s ease;
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease;
+  max-width:100%;
+  white-space:normal;
+}
+.btn-secondary:focus{
+  opacity:1 !important;
+}
+
+
 footer {padding: 24px 0 !important}
 
 #loadOverlay{display: none;}
