@@ -3,13 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Mission Mule - About Us</title>
+  <title>About | Goldwater Systems</title>
+
+  <div id="loadOverlay" style="background-color:#333; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149344050-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-149344050-1');
@@ -17,40 +22,83 @@
 
   <!-- Start of Async Drift Code -->
   <script>
-  "use strict";
+    "use strict";
 
-  !function() {
-    var t = window.driftt = window.drift = window.driftt || [];
-    if (!t.init) {
-      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-      t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-      t.factory = function(e) {
-        return function() {
-          var n = Array.prototype.slice.call(arguments);
-          return n.unshift(e), t.push(n), t;
-        };
-      }, t.methods.forEach(function(e) {
-        t[e] = t.factory(e);
-      }), t.load = function(t) {
-        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-        var i = document.getElementsByTagName("script")[0];
-        i.parentNode.insertBefore(o, i);
-      };
-    }
-  }();
-  drift.SNIPPET_VERSION = '0.3.1';
-  drift.load('6pcw4u3a3amw');
+    ! function() {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void(window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function(e) {
+            return function() {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+          }), t.load = function(t) {
+            var e = 3e5,
+              n = Math.ceil(new Date() / e) * e,
+              o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    // drift.SNIPPET_VERSION = '0.3.1';
+    // drift.load('6pcw4u3a3amw');
   </script>
   <!-- End of Async Drift Code -->
 
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Goldwater Systems",
+      "image": "https://www.goldwatersystems.com/img/favicon/favicon-310.png",
+      "telephone": "+1 (510) 775-0195",
+      "email": "info@goldwatersystems.com",
+      "description": "Goldwater offers real-time access to critical ground-sensors far beyond the reaches of existing power and connectivity infrastructure.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Livermore",
+        "addressRegion": "CA"
+      },
+      "url": "https://www.goldwatersystems.com/"
+    }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-  <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+  <meta name="description" content="Goldwater offers real-time access to critical ground-sensors far beyond the reaches of existing power and connectivity infrastructure.">
+  <link href="/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/css/theme.css" rel="stylesheet" type="text/css" media="all" />
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+  <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="/img/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="/img/favicon/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="/img/favicon/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16.png">
+  <link rel="apple-touch-icon" href="/img/favicon/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#4C4C4C">
+  <meta name="msapplication-TileImage" content="/img/favicon/favicon-144.png">
+  <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+
 </head>
 
 <body>
@@ -60,34 +108,116 @@
       <div class="nav-bar">
         <div class="module left">
           <a href="/">
-            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png">
-            <div class="vnu"><img class="logo logo-dark" alt="Foundry" src="img/mm-logo.png"></div>
+            <div class="vnu"><img class="logo logo-light" alt="Goldwater" src="/img/goldwater-logo-dark.png"></div>
+            <img class="logo logo-dark" alt="Goldwater" src="/img/goldwater-logo-dark.png">
           </a>
         </div>
         <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
           <i class="ti-menu"></i>
         </div>
         <div class="module-group right">
-          <div class="module-group right">
-            <div class="module left">
-              <ul class="menu">
-                <li>
-                  <a href="/" target="_self">Home </a>
-                </li>
-                <li class="vpf">
-                  <a href="/solution" target="_self">Solution </a>
-                </li>
-                <li class="vpf">
-                  <a href="/about" target="_self">About </a>
-                </li>
-                <li class="vpf">
-                  <a href="/faq" target="_self">faq </a>
-                </li>
-                <li class="vpf">
-                  <a href="/contact" target="_self">contact </a>
-                </li>
-              </ul>
-            </div>
+          <div class="module left">
+            <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="menu">
+              <li class="vpf">
+                <a href="/scout" target="_self">Scout AI Core </a>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">
+                  Sensors
+                </a>
+                <ul>
+                  <li>
+                    <a href="/sensors/audio" target="_self">
+                      Audio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/flow" target="_self">
+                      Liquid Flow Rate
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/radar" target="_self">
+                      Radar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/seismometer" target="_self">
+                      Seismic Waves
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/imaging" target="_self">
+                      Visual & Thermal Imaging
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/sensors/custom" target="_self">
+                      Custom Integration
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">
+                  Industries
+                </a>
+                <ul>
+                  <li>
+                    <a href="/industries/agriculture" target="_self">
+                      Agriculture
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/construction" target="_self">
+                      Construction
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/wildlife" target="_self">
+                      Park & Wildlife Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/forestry" target="_self">
+                      Forestry
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/defense" target="_self">
+                      Defense & Security
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/land-management" target="_self">
+                      Land Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/mining" target="_self">
+                      Mining
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/industries/oil-and-gas" target="_self">
+                      Oil & Gas
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="vpf">
+                <a href="/blog" target="_self">Blog </a>
+              </li>
+              <li class="vpf">
+                <a href="/about" target="_self">About </a>
+              </li>
+              <li class="vpf">
+                <a href="/contact" target="_self">Contact </a>
+              </li>
+              <li class="vpf">
+                <a href="/buy" target="_self">Buy </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -100,103 +230,72 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h3 class="uppercase mb0">About US<br></h3>
+            <h3 class="uppercase mb0">About</h3>
           </div>
-
+          <div class="col-md-6 text-right">
+            <ol class="breadcrumb breadcrumb-2">
+              <li>
+                <a class="btn-secondary" href="/">Home</a>
+              </li>
+              <li class="active">About</li>
+            </ol>
+          </div>
         </div>
-
       </div>
-
     </section>
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-sm-offset-1 text-center col-sm-10">
-            <h3 class="uppercase color-primary mb40 mb-xs-24">Our Mission<br></h3>
-            <p class="lead">To provide practical access to actionable data from the most remote corners of our planet.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-    <section class="bg-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-offset-1 text-right text-left-xs col-sm-5 col-md-4">
-            <h1 class="mb24 bold italic uppercase">Drones for Good<br></h1>
-            <h5 class="uppercase italic fade-1-4">Our story<br></h5>
-            <hr class="visible-xs">
-          </div>
-          <div class="col-sm-7 col-md-5">
-            <p>Mission Mule's journey began at the 2015 UAE Drones for Good Award, an annual international <a href="http://www.dronesforgood.ae/"><u>competition</u></a> "dedicated to transforming the innovative technologies behind civilian drones into practical,
-              realisable solutions for improving people’s lives today". Mission Mule's first technology offering, the Wadi Drone, won first prize in the national category.
-              <br>
-            </p>
-
-            <p>Actively committed to the environment and using technology to better our world, we developed our technology in collaboration with the rangers at Wadi Wuraiyah National Park to support them in monitoring animal populations and protecting against
-              poachers. Before Wadi Drone, rangers in Wadi Wuraiyah would hike along unstable cliffs in temperatures in excess of 110F to collect data from camera traps. Wadi Drone enables rangers to access the valuable data they need to track wildlife
-              populations, measure environmental stressors, and apprehend poachers—all without leaving their headquarters.
-              <br>
-            </p>
-
-            <p>We have taken our mission of providing practical access to actionable data from the most remote corners of our planet far beyond the wadis of the Arabian peninsula. Whether for environmental conservation, agriculture, or industry, we understand
-              that data is the key to success in today's world. We support our clients by providing them with data that was previously beyond their grasp.
-              <br>
-            </p>
+          <div class="col-sm-7 col-sm-offset-2">
+            <div class="post-snippet">
+              <h3>
+                Goldwater's mission is to provide real-time access to the most
+                remote corners of planet Earth.
+              </h3>
+              <p>
+                Goldwater was founded to solve one of the most difficult challenges
+                of remote fieldwork: access to reliable power and connectivity.
+                From anti-poaching operations in East Africa to remote wildfire monitors
+                in Northern California to oil pipeline early-leak detection,
+                fieldwork is often limited by the lack of access to real-time,
+                actionable data.
+              </p>
+              <p>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
+                officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+                facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+              </p>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              </p>
+              <ul class="bullets">
+                <li>Beatae vitae dicta sunt explicabo</li>
+                <li>Inventore veritatis et quasi architecto</li>
+                <li>Sed do eiusmod tempor incididunt</li>
+                <li>Accusamus et iusto odio dignissimos ducimus</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer-2 bg-dark pt96 pt-xs-40">
-      <div class="container">
-        <div class="row mb64 mb-xs-24">
-          <div class="col-sm-12">
-            <a href="/">
-              <div class="vnu"><img alt="logo" class="image-xxs" src="img/mm-logo-white.png"></div>
-            </a>
-          </div>
-        </div>
-        <div class="row mb64 mb-xs-24">
-          <div class="col-md-3 col-sm-4">
-            <ul>
-              <li><a href="/"><h5 class="uppercase mb16 fade-on-hover">Home</h5></a></li>
-              <li><a href="/solution"><h5 class="uppercase mb16 fade-on-hover">Solution<br></h5></a></li>
-              <li><a href="/about"><h5 class="uppercase mb16 fade-on-hover">About<br></h5></a></li>
-            </ul>
-          </div>
-
-          <div class="col-md-3 col-sm-4">
-            <ul>
-              <li><a href="/faq"><h5 class="uppercase mb16 fade-on-hover">Faq<br></h5></a></li>
-              <li><a href="/contact"><h5 class="uppercase mb16 fade-on-hover">Contact<br></h5></a></li>
-            </ul>
-          </div>
-
-          <div class="col-md-4 col-md-offset-2 col-sm-4">
-            <p class="lead fade-on-hover">Made with ♥ in Livermore, CA.
-              <br>
-            </p>
-            <p class="lead vpf fade-on-hover">info@missionmule.com
-              <br>+1 (510) 775-0195
-              <br>
-            </p>
-          </div>
-        </div>
-
-        <div class="row fade-half">
-          <div class="col-sm-12 text-center">
-            <span>© Copyright 2019 Mission Mule - All Rights Reserved</span>
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
 
+  <footer class="footer bg-dark pt-xs-40">
+    <div class="container">
+      <div class="row fade-half">
+        <div class="col-sm-12 text-center">
+          <span>© Copyright 2019 Goldwater Systems. All Rights Reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/flexslider.min.js"></script>
   <script src="js/parallax.js"></script>
   <script src="js/scripts.js"></script>
 </body>
