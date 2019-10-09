@@ -25,4 +25,6 @@ a:hover {
 .btn-black { color: #333 !important; border-color: #333; }
 .btn-black:hover { color: #fff !important; background: #333; }
 
+footer {padding: 24px 0 !important}
+
 #loadOverlay{display: none;}
