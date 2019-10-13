@@ -2,6 +2,8 @@
 
 .logo {max-height: 30%;}
 
+.mb0{ margin-bottom: 0 !important;}
+
 .image-xxs {max-width: 200px;}
 
 .extra-bold {font-weight: 800 !important;}
@@ -26,7 +28,7 @@ a:hover {
   .main-title { font-size: 64px !important;}
 }
 
-.btn-black { color: #333 !important; border-color: #333; }
+.btn-black { color: #333 !important; border-color: #333; background: none;}
 .btn-black:hover { color: #fff !important; background: #333; }
 
 .btn-secondary{
@@ -45,8 +47,8 @@ a:hover {
 .btn-secondary:focus{
   opacity:1 !important;
 }
-
-.contact-price{ font-size: 25px; line-height: 35px; font-weight: 300; color: @bg-dark; display: inline-block; margin-bottom: 32px;}
+.enterprise-price{ background-color: #777777 !important; }
+.contact-price{ font-size: 24px; line-height: 28px; font-weight: 300; color: @bg-dark; display: inline-block;}
 .contact-price:hover{text-decoration: underline;}
 
 
