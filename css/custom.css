@@ -48,7 +48,7 @@ a:hover {
   opacity:1 !important;
 }
 .enterprise-price{ background-color: #777777 !important; }
-.contact-price{ font-size: 24px; line-height: 28px; font-weight: 300; color: @bg-dark; display: inline-block;}
+.contact-price{ font-size: 24px; line-height: 36px; font-weight: 300; color: @bg-dark; display: inline-block;}
 .contact-price:hover{text-decoration: underline;}
 
 
