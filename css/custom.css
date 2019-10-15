@@ -62,7 +62,7 @@ a:hover {
 @media (min-width: 992px) {
   .buy-container {
     height:100%;
-    background-image: url("https://static-assets.tesla.com/share/tesla_react_app/EnergyConfigurator/606c48d57d26eb0b85b027f3516c2b11.jpg");
+    background-image: url("https://goldwatersystems.com/img/scout-in-situ-3.jpg");
     background-size: cover;
     background-position: cover;
   }
@@ -74,9 +74,6 @@ a:hover {
     width: 435px !important;
     right: 0;
     overflow-y: scroll;
-  }
-  .right-content {
-
   }
 }
 
