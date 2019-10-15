@@ -59,24 +59,31 @@ a:hover {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+@media (min-width: 992px) {
+  .buy-container {
+    height:100%;
+    background-image: url("https://static-assets.tesla.com/share/tesla_react_app/EnergyConfigurator/606c48d57d26eb0b85b027f3516c2b11.jpg");
+    background-size: cover;
+    background-position: cover;
+  }
 
-.buy-container {
-  height:100%;
-  background-image: url("https://static-assets.tesla.com/share/tesla_react_app/EnergyConfigurator/606c48d57d26eb0b85b027f3516c2b11.jpg");
-  background-size: cover;
-  background-position: cover;
+  .right-content-container {
+    padding: 48px 50px;
+    background: #fff;
+    position: absolute;
+    width: 435px !important;
+    right: 0;
+    overflow-y: scroll;
+  }
+  .right-content {
+
+  }
 }
 
-.right-content-container {
-  padding: 48px 50px;
-  background: #fff;
-  position: absolute;
-  width: 435px !important;
-  right: 0;
-  overflow-y: scroll;
-}
-.right-content {
-
+@media (max-width: 992px) {
+  .right-content-container {
+    margin-top: 40px;
+  }
 }
 
 .full-height {
