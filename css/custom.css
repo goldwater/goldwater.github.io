@@ -87,6 +87,10 @@ a:hover {
   height: calc(100vh - 55px) !important;
 }
 
+.checked {
+  
+}
+
 footer {padding: 24px 0 !important}
 
 #loadOverlay{display: none;}
