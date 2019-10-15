@@ -53,6 +53,36 @@ a:hover {
 
 .nav-bottom-border { border-bottom: 1px solid #b7b7b7 !important;}
 
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.buy-container {
+  height:100%;
+  background-image: url("https://static-assets.tesla.com/share/tesla_react_app/EnergyConfigurator/606c48d57d26eb0b85b027f3516c2b11.jpg");
+  background-size: cover;
+  background-position: cover;
+}
+
+.right-content-container {
+  padding: 48px 50px;
+  background: #fff;
+  position: absolute;
+  width: 435px !important;
+  right: 0;
+  overflow-y: scroll;
+}
+.right-content {
+
+}
+
+.full-height {
+  height: calc(100vh - 55px) !important;
+}
+
 footer {padding: 24px 0 !important}
 
 #loadOverlay{display: none;}
