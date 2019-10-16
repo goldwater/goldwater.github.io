@@ -87,8 +87,12 @@ a:hover {
   height: calc(100vh - 55px) !important;
 }
 
-.checked {
-  
+.radio-option.checked .inner{
+  color: #666666 !important;
+  background: #666666 !important;
+}
+.radio-option {
+  border: 1px solid #666666;
 }
 
 footer {padding: 24px 0 !important}
