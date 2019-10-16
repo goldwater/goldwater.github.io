@@ -95,6 +95,9 @@ a:hover {
   border: 1px solid #666666;
 }
 
+.purchase-button { color: #333 !important; border-color: #333 !important; background: none !important;}
+.purchase-button:hover { color: #fff !important; background: #333 !important; }}
+
 footer {padding: 24px 0 !important}
 
 #loadOverlay{display: none;}
