@@ -101,3 +101,9 @@ a:hover {
 footer {padding: 24px 0 !important}
 
 #loadOverlay{display: none;}
+
+.home-hero {
+  background-image: url("https://goldwatersystems.com/img/thermal.jpg");
+  background-size: cover;
+  background-position: cover;
+}
