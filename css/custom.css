@@ -96,7 +96,7 @@ a:hover {
 }
 
 .purchase-button { color: #333 !important; border-color: #333 !important; background: none !important;}
-.purchase-button:hover { color: #fff !important; background: #333 !important; }}
+.purchase-button:hover { color: #fff !important; background: #333 !important; }
 
 footer {padding: 24px 0 !important}
 
@@ -106,4 +106,28 @@ footer {padding: 24px 0 !important}
   background-image: url("https://goldwatersystems.com/img/thermal.jpg");
   background-size: cover;
   background-position: cover;
+   position:relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 0;
+   pointer-events: none;
+   overflow: hidden;
+}
+.home-hero iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .home-hero {
+    height: 100vh;
+  }
 }
