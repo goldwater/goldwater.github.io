@@ -7,6 +7,8 @@
 
   <div id="loadOverlay" style="background-color:#333; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
 
+  <script src="https://js.stripe.com/v3/"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149344050-1"></script>
   <script>
@@ -68,6 +70,8 @@
       "url": "https://www.goldwatersystems.com/"
     }
   </script>
+
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Goldwater offers real-time access to critical ground-sensors far beyond the reaches of existing power and connectivity infrastructure.">
@@ -230,9 +234,9 @@
   <div class="main-container" style="height: calc(100vh - 55px) !important;">
     <div class="buy-container">
       <div class="right-content-container" style="height: calc(100vh - 55px);">
-        <div class="col-sm-12 mb64">
-          <h5 class="uppercase mb0"><strong>Your Plan </strong></h5>
-          <p class="btn-secondary"><a style="color: #262626" class="mb32" href="/pricing">Details</a></p>
+        <div class="col-sm-12 mb32">
+          <h5 class="uppercase"><strong>Your Plan </strong></h5>
+          <!-- <p class="btn-secondary"><a style="color: #262626" class="mb32" href="/pricing">Details</a></p> -->
 
           <div>
             <div class="radio-option checked">
@@ -263,112 +267,148 @@
             <h5 class="mb0"><strong>Due today - $100</strong></h5>
             <p>Fully refundable</p>
           </div>
-        </div>
-        <div class="col-sm-12">
-          <h5 class="uppercase"><strong>Account Details</strong></h5>
-        </div>
-        <form class="customer-details mb80 mb-xs-40">
-          <div class="input-with-label col-sm-12 text-left">
-            <span>First Name:</span>
-            <input type="text" />
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Last Name:</span>
-            <input type="text" />
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Email Address:</span>
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Phone number:</span>
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Company Name:</span>
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-with-label col-sm-12 text-left mb64">
-            <span>Installation Address:</span>
-            <input type="text" placeholder="" />
-          </div>
           <div class="col-sm-12">
-            <h5 class="uppercase"><strong>Payment</strong></h5>
+            <h5 class="uppercase"><strong>Account Details</strong></h5>
           </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Name on Card:</span>
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Card Number:</span>
-            <input type="text" />
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>CVV:</span>
-            <input type="text" />
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Expiration Month:</span>
-            <select>
-              <option selected value="01">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>
-              <option value="04">04</option>
-              <option value="05">05</option>
-              <option value="06">06</option>
-              <option value="07">07</option>
-              <option value="08">08</option>
-              <option value="09">09</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Expiration Year:</span>
-            <select>
-              <option selected value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-              <option value="2027">2027</option>
-              <option value="2028">2028</option>
-              <option value="2029">2029</option>
-              <option value="2030">2030</option>
-              <option value="2031">2031</option>
-              <option value="2032">2032</option>
-              <option value="2033">2033</option>
-              <option value="2034">2034</option>
-            </select>
-          </div>
-          <div class="input-with-label col-sm-12 text-left">
-            <span>Zip Code:</span>
-            <input type="text" />
-          </div>
-          <div class="col-sm-12 mb16">
-            <p>
-              If you’re unhappy with your order for any reason, we will uninstall the system for a full refund within 30 days of installation.
-            </p>
-            <div class="text-center center-block">
-              <h4 class="mb0">Due today: $100</h4>
-              <p>Fully refundable</p>
+          <form class="customer-details mb80 mb-xs-40">
+            <div class="input-with-label col-sm-12 text-left">
+              <span>First Name:</span>
+              <input type="text" />
             </div>
-          </div>
-          <input style="width:250px;" type="submit" class="purchase-button center-block mb32" value="Place Order" />
-        </form>
+            <div class="input-with-label col-sm-12 text-left">
+              <span>Last Name:</span>
+              <input type="text" />
+            </div>
+            <div class="input-with-label col-sm-12 text-left">
+              <span>Email Address:</span>
+              <input type="text" placeholder="" />
+            </div>
+            <div class="input-with-label col-sm-12 text-left">
+              <span>Phone number:</span>
+              <input type="text" placeholder="" />
+            </div>
+            <div class="input-with-label col-sm-12 text-left">
+              <span>Company Name:</span>
+              <input type="text" placeholder="" />
+            </div>
+            <div class="input-with-label col-sm-12 text-left mb64">
+              <span>Installation Address:</span>
+              <input type="text" placeholder="" />
+            </div>
+            <div class="col-sm-12">
+              <h5 class="uppercase"><strong>Payment</strong></h5>
+            </div>
+          </form>
+
+          <form class="col-sm-12" action="/charge" method="post" id="payment-form">
+            <div class="form-row mb32 input-with-label text-left ">
+              <label for="card-element">
+                Credit or debit card
+              </label>
+              <div id="card-element">
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+
+              <!-- Used to display form errors. -->
+              <div id="card-errors" role="alert"></div>
+            </div>
+
+            <div class="mb16">
+              <p>
+                If you’re unhappy with your order for any reason, we will uninstall the system for a full refund within 30 days of installation.
+              </p>
+              <div class="text-center center-block">
+                <h4 class="mb0">Due today: $100</h4>
+                <p>Fully refundable</p>
+              </div>
+            </div>
+
+            <button style="width:250px;" type="submit" class="purchase-button center-block mb32">Submit Payment</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/flexslider.min.js"></script>
-  <script src="js/parallax.js"></script>
-  <script src="js/scripts.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flexslider.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+      // Create a Stripe client.
+      var stripe = Stripe('pk_test_Es0TitPgjJiv9pw17YRNZ0gr0058IarX1V');
+
+      // Create an instance of Elements.
+      var elements = stripe.elements();
+
+      // Custom styling can be passed to options when creating an Element.
+      // (Note that this demo uses a wider set of styles than the guide below.)
+      var style = {
+        base: {
+          color: '#32325d',
+          fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+          fontSmoothing: 'antialiased',
+          fontSize: '16px',
+          '::placeholder': {
+            color: '#aab7c4'
+          }
+        },
+        invalid: {
+          color: '#fa755a',
+          iconColor: '#fa755a'
+        }
+      };
+
+      // Create an instance of the card Element.
+      var card = elements.create('card', {
+        style: style
+      });
+
+      // Add an instance of the card Element into the `card-element` <div>.
+      card.mount('#card-element');
+
+      // Handle real-time validation errors from the card Element.
+      card.addEventListener('change', function(event) {
+        var displayError = document.getElementById('card-errors');
+        if (event.error) {
+          displayError.textContent = event.error.message;
+        } else {
+          displayError.textContent = '';
+        }
+      });
+
+      // Handle form submission.
+      var form = document.getElementById('payment-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        stripe.createToken(card).then(function(result) {
+          if (result.error) {
+            // Inform the user if there was an error.
+            var errorElement = document.getElementById('card-errors');
+            errorElement.textContent = result.error.message;
+          } else {
+            // Send the token to your server.
+            stripeTokenHandler(result.token);
+          }
+        });
+      });
+
+      // Submit the form with the token ID.
+      function stripeTokenHandler(token) {
+        // Insert the token ID into the form so it gets submitted to the server
+        var form = document.getElementById('payment-form');
+        var hiddenInput = document.createElement('input');
+        hiddenInput.setAttribute('type', 'hidden');
+        hiddenInput.setAttribute('name', 'stripeToken');
+        hiddenInput.setAttribute('value', token.id);
+        form.appendChild(hiddenInput);
+
+        // Submit the form
+        form.submit();
+      }
+    </script>
 </body>
 
 </html>
