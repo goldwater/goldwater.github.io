@@ -313,7 +313,8 @@
             </div>
           </div>
 
-          <button style="width:250px;" type="submit" class="purchase-button center-block mb32">Place Order</button>
+          <button style="width:250px;" type="submit" id="payment-submit" class="purchase-button center-block mb32" disabled>Place Order</button>
+          <div id="submit-errors" role="alert"></div>
         </form>
       </div>
     </div>
@@ -395,6 +396,9 @@
         } else {
           // Send the token to your server.
 
+          document.getElementById("payment-submit").innerHTML = "Submitting...";
+          document.getElementById("payment-submit").diabled = true;
+
           fetch('https://h2k90z8zl6.execute-api.us-east-1.amazonaws.com/prod/charges', {
               method: 'POST',
               body: JSON.stringify({
@@ -416,16 +420,17 @@
               },
             })
             .then(function(response) {
-              console.log(response);
               if (response.ok) {
                 // Report to the browser that the payment was successful, prompting
                 // it to close the browser payment interface.
-                console.log('Success');
+                window.location.replace("https://goldwatersystems.com/thanks");
               } else {
                 // Report to the browser that the payment failed, prompting it to
                 // re-show the payment interface, or show an error message and close
                 // the payment interface.
-                console.log('failure');
+                document.getElementById("payment-submit").disabled = false;
+                document.getElementById("payment-errors").textContent = "Payment failed. Please double check payment information. If this problem persists, please email zane@goldwatersystems.com."
+                document.getElementById("payment-submit").innerHTML = "Place Order";
               }
             })
         }
