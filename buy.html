@@ -234,10 +234,10 @@
   <div class="main-container" style="height: calc(100vh - 55px) !important;">
     <div class="buy-container">
       <div class="right-content-container" style="height: calc(100vh - 55px);">
-        <div class="col-sm-12 mb32">
-          <h5 class="uppercase"><strong>Your Plan </strong></h5>
-          <!-- <p class="btn-secondary"><a style="color: #262626" class="mb32" href="/pricing">Details</a></p> -->
 
+        <form class="col-sm-12" action="https://h2k90z8zl6.execute-api.us-east-1.amazonaws.com/prod/charges" method="post" id="payment-form">
+
+          <h5 class="uppercase"><strong>Your Plan </strong></h5>
           <div>
             <div class="radio-option checked">
               <div class="inner"></div>
@@ -263,169 +263,160 @@
             <span>Quantity:</span>
             <input type="text" />
           </div>
-          <div class="text-center center-block">
+          <div class="text-center center-block mb64">
             <h5 class="mb0"><strong>Due today - $100</strong></h5>
             <p>Fully refundable</p>
           </div>
-          <div class="col-sm-12">
+          <div class="">
             <h5 class="uppercase"><strong>Account Details</strong></h5>
           </div>
-          <form class="customer-details mb80 mb-xs-40">
-            <div class="input-with-label col-sm-12 text-left">
-              <span>First Name:</span>
-              <input type="text" />
-            </div>
-            <div class="input-with-label col-sm-12 text-left">
-              <span>Last Name:</span>
-              <input type="text" />
-            </div>
-            <div class="input-with-label col-sm-12 text-left">
-              <span>Email Address:</span>
-              <input type="text" placeholder="" />
-            </div>
-            <div class="input-with-label col-sm-12 text-left">
-              <span>Phone number:</span>
-              <input type="text" placeholder="" />
-            </div>
-            <div class="input-with-label col-sm-12 text-left">
-              <span>Company Name:</span>
-              <input type="text" placeholder="" />
-            </div>
-            <div class="input-with-label col-sm-12 text-left mb64">
-              <span>Installation Address:</span>
-              <input type="text" placeholder="" />
-            </div>
-            <div class="col-sm-12">
-              <h5 class="uppercase"><strong>Payment</strong></h5>
-            </div>
-          </form>
+          <div class="input-with-label text-left">
+            <span for="name" data-tid="name_label">Name</span>
+            <input id="name" data-tid="name_placeholder" type="text" required="" autocomplete="name">
+          </div>
+          <div class="input-with-label text-left">
+            <span for="email" data-tid="email_label">Email</spam>
+              <input id="email" data-tid="email_placeholder" type="text" required="" autocomplete="email">
+          </div>
+          <div class="input-with-label text-left">
+            <span for="phone">Phone</span>
+            <input id="phone" type="text" required="" autocomplete="tel">
+          </div>
+          <div class="input-with-label text-left">
+            <span>Company Name</span>
+            <input id="company" type="text" required="" placeholder="" />
+          </div>
+          <div class="input-with-label text-left mb64">
+            <span>Installation Address</span>
+            <input id="installation-address" type="text" required="" placeholder="" />
+          </div>
 
-          <form class="col-sm-12" action="https://h2k90z8zl6.execute-api.us-east-1.amazonaws.com/prod/charges" method="post" id="payment-form">
-            <div class="form-row mb32 input-with-label text-left ">
-              <div class="row">
-                <label for="name" data-tid="name_label">Name</label>
-                <input id="name" data-tid="name_placeholder" type="text" placeholder="Jane Doe" required="" autocomplete="name">
-              </div>
-              <div class="row">
-                <label for="email" data-tid="email_label">Email</label>
-                <input id="email" data-tid="email_placeholder" type="email" placeholder="janedoe@gmail.com" required="" autocomplete="email">
-              </div>
-              <div class="row">
-                <label for="phone" data-tid="phone_label">Phone</label>
-                <input id="phone" data-tid="form.phone_placeholder" type="tel" placeholder="(941) 555-0123" required="" autocomplete="tel">
-              </div>
-
-              <label for="card-element">
-                Credit or debit card
-              </label>
-              <div id="card-element">
-                <!-- A Stripe Element will be inserted here. -->
-              </div>
-
-              <!-- Used to display form errors. -->
-              <div id="card-errors" role="alert"></div>
+          <div class="">
+            <h5 class="uppercase"><strong>Payment</strong></h5>
+          </div>
+          <div class="input-with-label text-left mb32">
+            <span for="card-element">Credit or debit card</span>
+            <div id="card-element">
+              <!-- A Stripe Element will be inserted here. -->
             </div>
+            <!-- Used to display form errors. -->
+            <div id="card-errors" role="alert"></div>
+          </div>
 
-            <div class="mb16">
-              <p>
-                If you’re unhappy with your order for any reason, we will uninstall the system for a full refund within 30 days of installation.
-              </p>
-              <div class="text-center center-block">
-                <h4 class="mb0">Due today: $100</h4>
-                <p>Fully refundable</p>
-              </div>
+          <div class="mb32">
+            <p>
+              By placing this order you agree to allow Goldwater to save your credit card to pay for future services. You will have the chance to provide alternate payment information before any additional charges.
+            </p>
+            <div class="text-center center-block">
+              <h5 class="mb0"><strong>Due today - $100</strong></h5>
+              <p>Fully refundable</p>
             </div>
+          </div>
 
-            <button style="width:250px;" type="submit" class="purchase-button center-block mb32">Submit Payment</button>
-          </form>
-        </div>
+          <button style="width:250px;" type="submit" class="purchase-button center-block mb32">Place Order</button>
+        </form>
       </div>
     </div>
+  </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/flexslider.min.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/scripts.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/flexslider.min.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/scripts.js"></script>
 
-    <script>
-      // Create a Stripe client.
-      var stripe = Stripe('pk_test_Es0TitPgjJiv9pw17YRNZ0gr0058IarX1V');
+  <script>
+    // Create a Stripe client.
+    var stripe = Stripe('pk_test_Es0TitPgjJiv9pw17YRNZ0gr0058IarX1V');
 
-      // Create an instance of Elements.
-      var elements = stripe.elements();
+    // Create an instance of Elements.
+    var elements = stripe.elements();
 
-      // Custom styling can be passed to options when creating an Element.
-      // (Note that this demo uses a wider set of styles than the guide below.)
-      var style = {
-        base: {
-          color: '#32325d',
-          fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-          fontSmoothing: 'antialiased',
-          fontSize: '16px',
-          '::placeholder': {
-            color: '#aab7c4'
-          }
-        },
-        invalid: {
-          color: '#fa755a',
-          iconColor: '#fa755a'
+    // Custom styling can be passed to options when creating an Element.
+    // (Note that this demo uses a wider set of styles than the guide below.)
+    var style = {
+      base: {
+        color: '#32325d',
+        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontSmoothing: 'antialiased',
+        fontSize: '16px',
+        '::placeholder': {
+          color: '#aab7c4'
         }
-      };
+      },
+      invalid: {
+        color: '#fa755a',
+        iconColor: '#fa755a'
+      }
+    };
 
-      // Create an instance of the card Element.
-      var card = elements.create('card', {
-        style: style
-      });
+    // Create an instance of the card Element.
+    var card = elements.create('card', {
+      style: style
+    });
 
-      // Add an instance of the card Element into the `card-element` <div>.
-      card.mount('#card-element');
+    // Add an instance of the card Element into the `card-element` <div>.
+    card.mount('#card-element');
 
-      // Handle real-time validation errors from the card Element.
-      card.addEventListener('change', function(event) {
-        var displayError = document.getElementById('card-errors');
-        if (event.error) {
-          displayError.textContent = event.error.message;
+    // Handle real-time validation errors from the card Element.
+    card.addEventListener('change', function(event) {
+      var displayError = document.getElementById('card-errors');
+      if (event.error) {
+        displayError.textContent = event.error.message;
+      } else {
+        displayError.textContent = '';
+      }
+    });
+
+    // Handle form submission.
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var name = form.querySelector('#name');
+      var email = form.querySelector('#email');
+      var company = form.querySelector('#company');
+      var phone = form.querySelector('#phone');
+      var installationAddress = form.querySelector('#installation-address');
+
+      additionalData = {
+        name: name ? name.value : undefined,
+        email: email ? email.value : undefined,
+        company: company ? company.value : undefined,
+        phone: phone ? phone.value : undefined,
+        installationAddress: installationAddress ? installationAddress.value : undefined,
+      }
+
+      stripe.createToken(card, additionalData).then(function(result) {
+        if (result.error) {
+          // Inform the user if there was an error.
+          var errorElement = document.getElementById('card-errors');
+          errorElement.textContent = result.error.message;
         } else {
-          displayError.textContent = '';
-        }
-      });
+          // Send the token to your server.
 
-      // Handle form submission.
-      var form = document.getElementById('payment-form');
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        var name = form.querySelector('#name');
-        var email = form.querySelector('#email');
-
-        additionalData = {
-          name: name ? name.value : undefined,
-          email: email ? email.value : undefined,
-        }
-
-        stripe.createToken(card, additionalData).then(function(result) {
-          if (result.error) {
-            // Inform the user if there was an error.
-            var errorElement = document.getElementById('card-errors');
-            errorElement.textContent = result.error.message;
-          } else {
-            // Send the token to your server.
-
-            fetch('https://h2k90z8zl6.execute-api.us-east-1.amazonaws.com/prod/charges', {
+          fetch('https://h2k90z8zl6.execute-api.us-east-1.amazonaws.com/prod/charges', {
               method: 'POST',
               body: JSON.stringify({
                 token: result.token,
-                name: additionalData.name,
-                email: additionalData.email,
+                metadata: {
+                  name: additionalData.name,
+                  email: additionalData.email,
+                  company: additionalData.company,
+                  phone: additionalData.phone,
+                  installationAddress: additionalData.installationAddress
+                },
                 charge: {
                   amount: 10000,
                   currency: 'usd'
                 }
               }),
-              headers: {'content-type': 'application/json'},
+              headers: {
+                'content-type': 'application/json'
+              },
             })
             .then(function(response) {
+              console.log(respomse);
               if (response.ok) {
                 // Report to the browser that the payment was successful, prompting
                 // it to close the browser payment interface.
@@ -436,25 +427,11 @@
                 // the payment interface.
                 console.log('failure');
               }
-            // stripeTokenHandler(result.token);
             })
-          }});
+        }
       });
-
-      // Submit the form with the token ID.
-      function stripeTokenHandler(token) {
-        // Insert the token ID into the form so it gets submitted to the server
-        var form = document.getElementById('payment-form');
-        var hiddenInput = document.createElement('input');
-        hiddenInput.setAttribute('type', 'hidden');
-        hiddenInput.setAttribute('name', 'stripeToken');
-        hiddenInput.setAttribute('value', token.id);
-        form.appendChild(hiddenInput);
-
-        // Submit the form
-        form.submit();
-      }
-    </script>
+    });
+  </script>
 </body>
 
 </html>
