@@ -302,6 +302,19 @@
 
           <form class="col-sm-12" action="https://h2k90z8zl6.execute-api.us-east-1.amazonaws.com/prod/charges" method="post" id="payment-form">
             <div class="form-row mb32 input-with-label text-left ">
+              <div class="row">
+                <label for="name" data-tid="name_label">Name</label>
+                <input id="name" data-tid="name_placeholder" type="text" placeholder="Jane Doe" required="" autocomplete="name">
+              </div>
+              <div class="row">
+                <label for="email" data-tid="email_label">Email</label>
+                <input id="email" data-tid="email_placeholder" type="email" placeholder="janedoe@gmail.com" required="" autocomplete="email">
+              </div>
+              <div class="row">
+                <label for="phone" data-tid="phone_label">Phone</label>
+                <input id="phone" data-tid="form.phone_placeholder" type="tel" placeholder="(941) 555-0123" required="" autocomplete="tel">
+              </div>
+
               <label for="card-element">
                 Credit or debit card
               </label>
@@ -383,7 +396,15 @@
       form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        stripe.createToken(card).then(function(result) {
+        var name = form.querySelector('#name');
+        var email = form.querySelector('#email');
+
+        additionalData = {
+          name: name ? name.value : undefined,
+          email: email ? email.value : undefined,
+        }
+
+        stripe.createToken(card, additionalData).then(function(result) {
           if (result.error) {
             // Inform the user if there was an error.
             var errorElement = document.getElementById('card-errors');
