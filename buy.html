@@ -241,8 +241,8 @@
 
           <div class="select-option">
             <i class="ti-angle-down"></i>
-            <select>
-              <option selected value="Default">Sensor Type</option>
+            <select id="sensor">
+              <option selected value="default-sensor">Sensor Type</option>
               <option value="camera">Visual or thermal camera</option>
               <option value="liquid">Liquid flow rate</option>
               <option value="audio">Audio</option>
@@ -253,19 +253,19 @@
           </div>
           <div class="select-option">
             <i class="ti-angle-down"></i>
-            <select>
-              <option selected value="Default">Connectivity</option>
+            <select id="connectivity">
+              <option selected value="default-connectivity">Connectivity</option>
               <option value="cellular">Cellular</option>
               <option value="satellite">Satellite</option>
             </select>
           </div>
           <div class="select-option">
             <i class="ti-angle-down"></i>
-            <select>
-              <option selected value="Default">Service Plan</option>
-              <option value="cellular">Basic</option>
-              <option value="satellite">Pro</option>
-              <option value="satellite">Enterprise</option>
+            <select id="plan">
+              <option selected value="default-plan">Service Plan</option>
+              <option value="basic">Basic</option>
+              <option value="pro">Pro</option>
+              <option value="enterprise">Enterprise</option>
             </select>
           </div>
           <div class="input-with-label text-left">
@@ -388,6 +388,8 @@
       var company = form.querySelector('#company');
       var phone = form.querySelector('#phone');
       var installationAddress = form.querySelector('#installation-address');
+      var sensor = form.querySelector('#sensor');
+      var connectivity = form.querySelector('#connectivity');
       var plan = form.querySelector('#plan');
       var quantity = form.querySelector('#quantity');
 
@@ -397,8 +399,10 @@
         company: company ? company.value : undefined,
         phone: phone ? phone.value : undefined,
         installationAddress: installationAddress ? installationAddress.value : undefined,
-        plan: plan ? plan.value : undefined,
-        quantity: quantity ? quantity.value : undefined
+        sensor: sensor ? sensor.options[sensor.selectedIndex].value : undefined,
+        connectivity: connectivity ? connectivity.options[connectivity.selectedIndex].value : undefined,
+        plan: plan ? plan.options[plan.selectedIndex].value : undefined,
+        quantity: quantity ? quantity.value : undefined,
       }
 
       stripe.createToken(card, additionalData).then(function(result) {
@@ -408,7 +412,6 @@
           errorElement.textContent = result.error.message;
         } else {
           // Send the token to your server.
-
           document.getElementById("payment-submit").innerHTML = "Submitting...";
           document.getElementById("payment-submit").diabled = true;
 
