@@ -426,6 +426,7 @@
 
           fetch('https://h2k90z8zl6.execute-api.us-east-1.amazonaws.com/prod/charges', {
               method: 'POST',
+              mode: 'cors',
               body: JSON.stringify({
                 token: result.token,
                 metadata: {
