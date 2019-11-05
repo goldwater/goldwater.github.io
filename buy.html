@@ -323,7 +323,7 @@
           </div>
 
           <button style="width:250px;" type="submit" id="payment-submit" class="purchase-button center-block mb32">Place Order</button>
-          <div id="submit-errors" role="alert"></div>
+          <div id="payment-errors" role="alert"></div>
         </form>
       </div>
     </div>
@@ -449,7 +449,7 @@
                 // re-show the payment interface, or show an error message and close
                 // the payment interface.
                 document.getElementById("payment-submit").disabled = false;
-                document.getElementById("payment-errors").textContent = "Payment failed. Please double check payment information. If this problem persists, please email zane@goldwatersystems.com."
+                document.getElementById("payment-errors").innerHTML = "Payment failed. Please double check payment information. If this problem persists, please email zane@goldwatersystems.com."
                 document.getElementById("payment-submit").innerHTML = "Place Order";
               }
             })
