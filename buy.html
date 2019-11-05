@@ -346,7 +346,7 @@
 
   <script>
     // Create a Stripe client.
-    var stripe = Stripe('pk_test_Es0TitPgjJiv9pw17YRNZ0gr0058IarX1V');
+    var stripe = Stripe('pk_live_lQzrwheW8qQsAd79CHvq7Faq00wTjAaDnH');
 
     // Create an instance of Elements.
     var elements = stripe.elements();
@@ -440,7 +440,7 @@
                   quantity: additionalData.quantity
                 },
                 charge: {
-                  amount: 10000,
+                  amount: 100,
                   currency: 'usd'
                 }
               }),
@@ -458,7 +458,7 @@
                 // re-show the payment interface, or show an error message and close
                 // the payment interface.
                 document.getElementById("payment-submit").disabled = false;
-                document.getElementById("payment-errors").innerHTML = "Payment failed. Please double check payment information. If this problem persists, please email zane@goldwatersystems.com."
+                document.getElementById("payment-errors").innerHTML = 'Payment failed. Please double check your payment information. If this problem persists, please use the <a href="/contact" target="_self">contact form</a>.'
                 document.getElementById("payment-submit").innerHTML = "Place Order";
               }
             })
