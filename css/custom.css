@@ -177,3 +177,11 @@ input:focus {
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
