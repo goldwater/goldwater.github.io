@@ -237,36 +237,45 @@
 
         <form class="col-sm-12" action="https://h2k90z8zl6.execute-api.us-east-1.amazonaws.com/prod/charges" method="post" id="payment-form">
 
-          <h5 class="uppercase"><strong>Your Plan </strong></h5>
-          <div>
-            <div class="radio-option checked">
-              <div class="inner"></div>
-              <input type="radio" name="radio" value="radio1" />
-            </div>
-            <span><strong>Basic</strong> - $245 per month per terminal</span>
+          <h5 class="uppercase"><strong>Your Scout Core </strong></h5>
+
+          <div class="select-option">
+            <i class="ti-angle-down"></i>
+            <select>
+              <option selected value="Default">Sensor Type</option>
+              <option value="camera">Visual or thermal camera</option>
+              <option value="liquid">Liquid flow rate</option>
+              <option value="audio">Audio</option>
+              <option value="radar">Radar</option>
+              <option value="seismometer">Seismometer</option>
+              <option value="other">Other - We will be in touch</option>
+            </select>
           </div>
-          <div>
-            <div class="radio-option">
-              <div class="inner"></div>
-              <input type="radio" name="radio" value="radio1" />
-            </div>
-            <span><strong>Pro</strong> - $495 per month per terminal</span>
+          <div class="select-option">
+            <i class="ti-angle-down"></i>
+            <select>
+              <option selected value="Default">Connectivity</option>
+              <option value="cellular">Cellular</option>
+              <option value="satellite">Satellite</option>
+            </select>
           </div>
-          <div>
-            <div class="radio-option">
-              <div class="inner"></div>
-              <input type="radio" name="radio" value="radio1" />
-            </div>
-            <span><strong>Enterprise</strong> - Call us</span>
+          <div class="select-option">
+            <i class="ti-angle-down"></i>
+            <select>
+              <option selected value="Default">Service Plan</option>
+              <option value="cellular">Basic</option>
+              <option value="satellite">Pro</option>
+              <option value="satellite">Enterprise</option>
+            </select>
           </div>
-          <div class="input-with-label text-left mb16">
-            <span>Quantity:</span>
-            <input type="text" />
+          <div class="input-with-label text-left">
+            <span>Quantity</span>
+            <input id="quantity" type="number" />
           </div>
-          <div class="text-center center-block mb64">
-            <h5 class="mb0"><strong>Due today - $100</strong></h5>
-            <p>Fully refundable</p>
-          </div>
+          <p class="mb88">
+            Your Scout Core configuration details can be adjusted after the order is placed. We will be in touch to identify specific sensor or camera needs and to address cellular or satellite connectivity availability in your area.
+          </p>
+
           <div class="">
             <h5 class="uppercase"><strong>Account Details</strong></h5>
           </div>
@@ -275,7 +284,7 @@
             <input id="name" data-tid="name_placeholder" type="text" required="" autocomplete="name">
           </div>
           <div class="input-with-label text-left">
-            <span for="email" data-tid="email_label">Email</spam>
+            <span for="email" data-tid="email_label">Work Email</spam>
               <input id="email" data-tid="email_placeholder" type="text" required="" autocomplete="email">
           </div>
           <div class="input-with-label text-left">
@@ -305,7 +314,7 @@
 
           <div class="mb32">
             <p>
-              By placing this order you agree to allow Goldwater to save your credit card to pay for future services. You will have the chance to provide alternate payment information before any additional charges.
+              By placing this order you agree to allow Goldwater to save your credit card to pay for future services. You will have the opportunity to provide alternate payment information before any additional charges.
             </p>
             <div class="text-center center-block">
               <h5 class="mb0"><strong>Due today - $100</strong></h5>
@@ -313,7 +322,7 @@
             </div>
           </div>
 
-          <button style="width:250px;" type="submit" id="payment-submit" class="purchase-button center-block mb32" disabled>Place Order</button>
+          <button style="width:250px;" type="submit" id="payment-submit" class="purchase-button center-block mb32">Place Order</button>
           <div id="submit-errors" role="alert"></div>
         </form>
       </div>
@@ -338,7 +347,7 @@
     var style = {
       base: {
         color: '#32325d',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontFamily: '"Raleway", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {
@@ -379,6 +388,8 @@
       var company = form.querySelector('#company');
       var phone = form.querySelector('#phone');
       var installationAddress = form.querySelector('#installation-address');
+      var plan = form.querySelector('#plan');
+      var quantity = form.querySelector('#quantity');
 
       additionalData = {
         name: name ? name.value : undefined,
@@ -386,6 +397,8 @@
         company: company ? company.value : undefined,
         phone: phone ? phone.value : undefined,
         installationAddress: installationAddress ? installationAddress.value : undefined,
+        plan: plan ? plan.value : undefined,
+        quantity: quantity ? quantity.value : undefined
       }
 
       stripe.createToken(card, additionalData).then(function(result) {
